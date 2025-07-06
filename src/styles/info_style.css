@@ -1,0 +1,9 @@
+.panel-input-col .conbox.col-3 .left { width: 100% !important; }
+.flex { display: grid; grid-template-columns: repeat(2,1fr); gap: 100px; }
+.list9 .vertical-table-th { justify-content: space-around ; }
+.vertical-table .content { width: 100px; overflow: hidden; }
+.btn-upload { width: 150px; height: 30px; background: #fff; border: 1px solid rgb(77,77,77); border-radius: 10px; font-weight: 500; cursor: pointer; display: flex; align-items: center; justify-content: center; color: black; }
+#file { display: none; }
+.auto-center{ margin-top: 16px; display: flex; justify-content: center;  }
+.auto-center li {   color: var(--color500);  }
+.auto-center li:last-child {margin-left:15px; }
