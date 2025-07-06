@@ -1,0 +1,46 @@
+name: Deploy to 닷홈
+
+# main 브랜치에 push될 때 실행
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. 코드 체크아웃
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # 2. Node.js 설정
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          cache: 'npm'
+
+      # 3. 의존성 설치
+      - name: Install dependencies
+        run: npm ci
+
+      # 4. 프로덕션 빌드
+      - name: Build project
+        run: npm run build
+        env:
+          REACT_APP_API_URL: https://jeongyoon.dothome.co.kr/api
+
+      # 5. 닷홈 FTP 업로드
+      - name: Deploy to 닷홈 via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./build/
+          server-dir: /html/
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/node_modules/**

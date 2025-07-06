@@ -525,7 +525,7 @@ function Sidebar({ activeMenu, setActiveMenu }) {
     return (
         <div className="my-lnb-sidebar">
             <dl className="user-greeting">
-                <dt>포트폴리오 FAQ</dt>
+                <dt>포트폴리오 FAQQQQQQQQQQQQQQQQQQQQ</dt>
                 <dd>궁금한 것을 찾아보세요</dd>
             </dl>
             <div className="code-customer-menu">
