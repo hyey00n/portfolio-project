@@ -2,6 +2,7 @@
   "dependencies": {
     "express-rate-limit": "^7.5.1",
     "helmet": "^8.1.0",
+    "multer": "^2.0.1",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-scripts": "^5.0.1"
