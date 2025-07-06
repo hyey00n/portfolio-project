@@ -367,8 +367,14 @@ function InquiryForm2() {
                         <a href="" className={activeFilter === 'UX/UI디자인' ? 'active' : ''} onClick={(e) => { e.preventDefault(); handleFilterClick('UX/UI디자인'); }}>
                             <i></i>UX/UI디자인 <span style={{ background: '#ff6b35', color: 'white', borderRadius: '10px', padding: '2px 6px', fontSize: '12px', marginLeft: '5px' }}>{getCategoryCount('UX/UI디자인')}</span>
                         </a>
-                        <a href="" className={activeFilter === '그래픽디자인' ? 'active' : ''} onClick={(e) => { e.preventDefault(); handleFilterClick('그래픽디자인'); }}>
-                            <i></i>그래픽디자인 <span style={{ background: '#ff6b35', color: 'white', borderRadius: '10px', padding: '2px 6px', fontSize: '12px', marginLeft: '5px' }}>{getCategoryCount('그래픽디자인')}</span>
+                        <a href="" className={activeFilter === '소형홍보물' ? 'active' : ''} onClick={(e) => { e.preventDefault(); handleFilterClick('소형홍보물'); }}>
+                            <i></i>소형홍보물 <span style={{ background: '#ff6b35', color: 'white', borderRadius: '10px', padding: '2px 6px', fontSize: '12px', marginLeft: '5px' }}>{getCategoryCount('소형홍보물')}</span>
+                        </a>
+                        <a href="" className={activeFilter === '대형홍보물' ? 'active' : ''} onClick={(e) => { e.preventDefault(); handleFilterClick('대형홍보물'); }}>
+                            <i></i>대형홍보물 <span style={{ background: '#ff6b35', color: 'white', borderRadius: '10px', padding: '2px 6px', fontSize: '12px', marginLeft: '5px' }}>{getCategoryCount('대형홍보물')}</span>
+                        </a>
+                        <a href="" className={activeFilter === '디지털디자인' ? 'active' : ''} onClick={(e) => { e.preventDefault(); handleFilterClick('디지털디자인'); }}>
+                            <i></i>디지털디자인 <span style={{ background: '#ff6b35', color: 'white', borderRadius: '10px', padding: '2px 6px', fontSize: '12px', marginLeft: '5px' }}>{getCategoryCount('디지털디자인')}</span>
                         </a>
                     </div>
                 </div>
