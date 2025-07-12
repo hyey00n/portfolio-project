@@ -5,13 +5,6 @@ function GnbHeader({ activeTab, onTabClick }) {
   const [isAboutModalOpen, setIsAboutModalOpen] = useState(false);
   const [isCareerModalOpen, setIsCareerModalOpen] = useState(false);
 
-  // 디자이너 알기 모달 열기/닫기
-  const openAboutModal = () => setIsAboutModalOpen(true);
-  const closeAboutModal = () => setIsAboutModalOpen(false);
-
-  // 경력사항 모달 열기/닫기
-  const openCareerModal = () => setIsCareerModalOpen(true);
-  const closeCareerModal = () => setIsCareerModalOpen(false);
 
   return (
       <>
@@ -19,14 +12,6 @@ function GnbHeader({ activeTab, onTabClick }) {
           {/* 광고 영역 */}
           <section className="sec-head-content">
             <p className="top-fix-ad"><i></i>포트폴리오 갤러리에 오신 것을 환영합니다!</p>
-            <p className="head-menu">
-              <a href="#" onClick={(e) => { e.preventDefault(); openAboutModal(); }}>
-                디자이너 알기
-              </a>
-              <a href="#" onClick={(e) => { e.preventDefault(); openCareerModal(); }}>
-                경력사항
-              </a>
-            </p>
           </section>
 
           <section className="sec-gnb-wrap gnb-scroll-fix">

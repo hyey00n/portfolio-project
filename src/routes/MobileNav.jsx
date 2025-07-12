@@ -5,49 +5,57 @@ import '../styles/info_style.css';
 import '../styles/common.css';
 
 function Footer() {
-    const handleInquiryClick = () => {
-        // 홈의 1:1문의하기로 이동하는 로직
-        // 예: window.location.href = '/home#inquiry' 또는 React Router 사용
-        console.log('1:1문의하기로 이동');
+    const handleHomeClick = () => {
+        // 홈으로 이동하는 로직
+        // 예: window.location.href = '/home' 또는 React Router 사용
+        console.log('홈으로 이동');
     };
 
-    const handleHomeClick = () => {
-        // 홈의 공지사항이 보이도록 하는 로직
-        // 예: window.location.href = '/home#notice' 또는 React Router 사용
-        console.log('홈 공지사항으로 이동');
+    const handleAboutClick = () => {
+        // About 페이지로 이동하는 로직
+        // 예: window.location.href = '/about' 또는 React Router 사용
+        console.log('About 페이지로 이동');
     };
 
     const handleGalleryClick = () => {
-        // 갤러리 추첨형으로 이동하는 로직
+        // 갤러리로 이동하는 로직
         // 예: window.location.href = '/gallery' 또는 React Router 사용
-        console.log('갤러리 추첨형으로 이동');
+        console.log('갤러리로 이동');
     };
 
-    const handleMoreClick = () => {
-        // 오른쪽에서 70% 사이드바가 나오는 로직
-        // 사이드바 상태 관리 함수 호출 또는 클래스 토글
-        document.body.classList.add('sidebar-open');
-        console.log('사이드바 열기');
+    const handleFaqClick = () => {
+        // FAQ 페이지로 이동하는 로직
+        // 예: window.location.href = '/faq' 또는 React Router 사용
+        console.log('FAQ 페이지로 이동');
+    };
+
+    const handleContactClick = () => {
+        // 문의하기 페이지로 이동하는 로직
+        // 예: window.location.href = '/contact' 또는 React Router 사용
+        console.log('문의하기 페이지로 이동');
     };
 
     return (
         <>
-                <nav className="footer-nav-wrap">
-                    <div className="ft-nav-list">
-                        <a href="#" className="quest" onClick={handleInquiryClick}>
-                            <i></i><span>문의하기</span>
-                        </a>
-                        <a href="#" className="home active" onClick={handleHomeClick}>
-                            <i></i><span>홈</span>
-                        </a>
-                        <a href="#" className="gallery" onClick={handleGalleryClick}>
-                            <i></i><span>갤러리</span>
-                        </a>
-                        <a href="#" className="menu" onClick={handleMoreClick}>
-                            <i></i><span>더보기</span>
-                        </a>
-                    </div>
-                </nav>
+            <nav className="footer-nav-wrap">
+                <div className="ft-nav-list">
+                    <a href="#" className="home active" onClick={handleHomeClick}>
+                        <i className="home-icon"></i><span>홈</span>
+                    </a>
+                    <a href="#" className="about" onClick={handleAboutClick}>
+                        <i className="about-icon"></i><span>About</span>
+                    </a>
+                    <a href="#" className="gallery" onClick={handleGalleryClick}>
+                        <i className="gallery-icon"></i><span>갤러리</span>
+                    </a>
+                    <a href="#" className="faq" onClick={handleFaqClick}>
+                        <i className="faq-icon"></i><span>FAQ</span>
+                    </a>
+                    <a href="#" className="contact" onClick={handleContactClick}>
+                        <i className="contact-icon"></i><span>문의</span>
+                    </a>
+                </div>
+            </nav>
         </>
     )
 }
