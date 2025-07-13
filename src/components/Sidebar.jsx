@@ -27,7 +27,7 @@ function Sidebar({ activeFilter, onFilterClick, getCategoryCount }) {
                     >
                         <i></i>{category.label}
                         <span style={{
-                            background: '#ff6b35',
+                            background: 'var(--mainColor1)',
                             color: 'white',
                             borderRadius: '10px',
                             padding: '2px 6px',

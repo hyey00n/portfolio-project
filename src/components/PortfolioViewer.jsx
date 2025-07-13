@@ -85,29 +85,30 @@ function PortfolioViewer({
                                     paddingBottom: '12px',
                                     borderBottom: '1px solid #eee'
                                 }}>
+
                                     <div className="company-info" style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
                                         <span className="mall" style={{
                                             background: '#e9ecef',
                                             color: '#495057',
-                                            padding: '4px 8px',
+                                            padding: '8px 10px',
                                             borderRadius: '12px',
-                                            fontSize: '12px',
+                                            fontSize: '14px',
                                             fontWeight: '500'
                                         }}>
                                             {currentItem.mallName}
                                         </span>
                                         <span className="brand" style={{
-                                            background: '#007bff',
+                                            background: 'var(--mainColor1)',
                                             color: 'white',
-                                            padding: '4px 8px',
-                                            borderRadius: '12px',
-                                            fontSize: '12px',
+                                            padding: '8px 10px',
+                                            borderRadius: '14px',
+                                            fontSize: '14px',
                                             fontWeight: '500'
                                         }}>
                                             {currentItem.type}
                                         </span>
                                     </div>
-                                    <span className="deadline" style={{ fontSize: '12px', color: '#6c757d' }}>
+                                    <span className="deadline" style={{ fontSize: '14px', color: '#6c757d' }}>
                                         {currentItem.deadline}
                                     </span>
                                 </li>
@@ -117,7 +118,7 @@ function PortfolioViewer({
                                     fontSize: '18px',
                                     fontWeight: 'bold',
                                     color: '#333',
-                                    marginBottom: '12px',
+                                    marginBottom: '14px',
                                     lineHeight: '1.4'
                                 }}>
                                     {currentItem.title}
@@ -128,7 +129,7 @@ function PortfolioViewer({
                                     display: 'flex',
                                     gap: '16px',
                                     marginBottom: '15px',
-                                    fontSize: '14px'
+                                    fontSize: '16px'
                                 }}>
                                     <span className="participants" style={{ color: '#6c757d' }}>
                                         참여: <strong style={{ color: '#333' }}>{currentItem.participants}</strong>
@@ -148,7 +149,7 @@ function PortfolioViewer({
                                 }}>
                                     <p style={{
                                         margin: 0,
-                                        fontSize: '14px',
+                                        fontSize: '16px',
                                         lineHeight: '1.6',
                                         color: '#555'
                                     }}>
@@ -185,7 +186,7 @@ function PortfolioViewer({
                     {currentItemIndex > 0 && (
                         <button onClick={onPrevItem} style={{
                             position: 'absolute', left: '10px', top: '50%', transform: 'translateY(-50%)',
-                            background: 'rgba(0,0,0,0.6)', color: 'white', border: 'none', borderRadius: '50%',
+                            background: '#ccc', color: 'white', border: 'none', borderRadius: '50%',
                             width: '45px', height: '45px', cursor: 'pointer', fontSize: '20px',
                             display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 10
                         }}>‹</button>
@@ -193,7 +194,7 @@ function PortfolioViewer({
                     {currentItemIndex < currentItems.length - 1 && (
                         <button onClick={onNextItem} style={{
                             position: 'absolute', right: '10px', top: '50%', transform: 'translateY(-50%)',
-                            background: 'rgba(0,0,0,0.6)', color: 'white', border: 'none', borderRadius: '50%',
+                            background: '#ccc', color: 'white', border: 'none', borderRadius: '50%',
                             width: '45px', height: '45px', cursor: 'pointer', fontSize: '20px',
                             display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 10
                         }}>›</button>
@@ -207,7 +208,7 @@ function PortfolioViewer({
                             position: 'absolute',
                             bottom: '20px',
                             right: '20px',
-                            background: '#007bff',
+                            background: '#ccc',
                             color: 'white',
                             border: 'none',
                             borderRadius: '50%',
@@ -283,16 +284,7 @@ function PortfolioViewer({
 function getBadgeColor(badge) {
     const colors = {
         'bright-blue': '#007bff',
-        'bright-green': '#28a745',
-        'bright-purple': '#6f42c1',
-        'bright-cyan': '#17a2b8',
-        'bright-teal': '#20c997',
-        'bright-indigo': '#6610f2',
-        'bright-red': '#dc3545',
         'bright-orange': '#fd7e14',
-        'bright-yellow': '#ffc107',
-        'bright-pink': '#e83e8c',
-        'bright-brown': '#6c5ce7'
     };
     return colors[badge] || '#6c757d';
 }

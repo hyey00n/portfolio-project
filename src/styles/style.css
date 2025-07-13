@@ -58,15 +58,32 @@
     .footer-nav-wrap .ft-nav-list a span { font-size: 12px; }
     .footer-nav-wrap .ft-nav-list .login i { background: url('../assets/images/footer-nav-login-off.png')no-repeat center; width: 30px; height: 30px; background-size: 100%; }
     .footer-nav-wrap .ft-nav-list .quest i { background: url('../assets/images/footer-nav-quest-off.png')no-repeat center; width: 30px; height: 30px; background-size: 100%; }
-    .footer-nav-wrap .ft-nav-list .home i { background: url('../assets/images/footer-nav-home-off.png')no-repeat center; width: 30px; height: 30px; background-size: 100%; }
     .footer-nav-wrap .ft-nav-list .my i { background: url('../assets/images/footer-nav-my-off.png')no-repeat center; width: 30px; height: 30px; background-size: 100%; }
     .footer-nav-wrap .ft-nav-list .menu i { background: url('../assets/images/footer-nav-menu-off.png')no-repeat center; width: 30px; height: 30px; background-size: 100%; }
 
     .footer-nav-wrap .ft-nav-list .login.active i { background: url('../assets/images/footer-nav-camp-off.png')no-repeat center; width: 30px; height: 30px; background-size: 100%; }
     .footer-nav-wrap .ft-nav-list .quest.active i { background: url('../assets/images/footer-nav-quest-on.png')no-repeat center; width: 30px; height: 30px; background-size: 100%; }
-    .footer-nav-wrap .ft-nav-list .home.active i { background: url('../assets/images/footer-nav-home-on.png')no-repeat center; width: 30px; height: 30px; background-size: 100%; }
     .footer-nav-wrap .ft-nav-list .my.active i { background: url('../assets/images/footer-nav-my-on.png')no-repeat center; width: 30px; height: 30px; background-size: 100%; }
     .footer-nav-wrap .ft-nav-list .menu.active i { background: url('../assets/images/footer-nav-menu-on.png')no-repeat center; width: 30px; height: 30px; background-size: 100%; }
+
+
+    .footer-nav-wrap .ft-nav-list .home i { background: url('../assets/images/footer-nav-home-off.png')no-repeat center; width: 30px; height: 30px; background-size: 120%; }
+    .footer-nav-wrap .ft-nav-list .home.active i { background: url('../assets/images/footer-nav-home-on.png')no-repeat center; width: 30px; height: 30px; background-size: 120%; }
+
+
+    .footer-nav-wrap .ft-nav-list .about i { background: url('../assets/images/footer-nav-about-off.png')no-repeat center; width: 30px; height: 30px; background-size: 120%; }
+    .footer-nav-wrap .ft-nav-list .about.active i { background: url('../assets/images/footer-nav-about-on.png')no-repeat center; width: 30px; height: 30px; background-size: 120%; }
+
+    .footer-nav-wrap .ft-nav-list .gallery i { background: url('../assets/images/footer-nav-gallery-off.png')no-repeat center; width: 30px; height: 30px; background-size: 120%; }
+    .footer-nav-wrap .ft-nav-list .gallery.active i { background: url('../assets/images/footer-nav-gallery-on.png')no-repeat center; width: 30px; height: 30px; background-size: 120%; }
+
+    .footer-nav-wrap .ft-nav-list .faq i { background: url('../assets/images/footer-nav-faq-off.png')no-repeat center; width: 30px; height: 30px; background-size: 120%; }
+    .footer-nav-wrap .ft-nav-list .faq.active i { background: url('../assets/images/footer-nav-faq-on.png')no-repeat center; width: 30px; height: 30px; background-size: 120%; }
+
+    .footer-nav-wrap .ft-nav-list .contact i { background: url('../assets/images/footer-nav-contact-off.png')no-repeat center; width: 30px; height: 30px; background-size: 120%; }
+    .footer-nav-wrap .ft-nav-list .contact.active i { background: url('../assets/images/footer-nav-contact-on.png')no-repeat center; width: 30px; height: 30px; background-size: 120%; }
+
+
 }
 
 /* 메인 우측 드롭다운 */
@@ -100,11 +117,13 @@
 
 
 .code-customer-menu a:nth-child(1) i { background: url('../assets/svg/ico-customer-01.svg')no-repeat center; width: 16px; height: 16px; background-size: 100%; filter: var(--filter600); }
-.code-customer-menu a:nth-child(2) i { background: url('../assets/svg/ico-customer-02.svg')no-repeat center; width: 16px; height: 16px; background-size: 100%; filter: var(--filter600); }
-.code-customer-menu a:nth-child(3) i { background: url('../assets/svg/ico-customer-03.svg')no-repeat center; width: 16px; height: 16px; background-size: 100%; filter: var(--filter600); }
+.code-customer-menu a:nth-child(2) i { background: url('../assets/svg/ico-mobile.svg')no-repeat center; width: 16px; height: 16px; background-size: 100%; filter: var(--filter600); }
+.code-customer-menu a:nth-child(3) i { background: url('../assets/svg/ico-customer-04.svg')no-repeat center; width: 16px; height: 16px; background-size: 100%; filter: var(--filter600); }
+.code-customer-menu a:nth-child(4) i { background: url('../assets/svg/ico-my-02.svg')no-repeat center; width: 16px; height: 16px; background-size: 100%; filter: var(--filter600); }
 .code-customer-menu a:nth-child(1):hover i { background: url('../assets/svg/ico-customer-01.svg')no-repeat center; width: 16px; height: 16px; background-size: 100%; filter: var(--filterMain1); }
-.code-customer-menu a:nth-child(2):hover i { background: url('../assets/svg/ico-customer-02.svg')no-repeat center; width: 16px; height: 16px; background-size: 100%; filter: var(--filterMain1); }
-.code-customer-menu a:nth-child(3):hover i { background: url('../assets/svg/ico-customer-03.svg')no-repeat center; width: 16px; height: 16px; background-size: 100%; filter: var(--filterMain1); }
+.code-customer-menu a:nth-child(2):hover i { background: url('../assets/svg/ico-mobile.svg')no-repeat center; width: 16px; height: 16px; background-size: 100%; filter: var(--filterMain1); }
+.code-customer-menu a:nth-child(3):hover i { background: url('../assets/svg/ico-customer-04.svg')no-repeat center; width: 16px; height: 16px; background-size: 100%; filter: var(--filterMain1); }
+.code-customer-menu a:nth-child(4):hover i { background: url('../assets/svg/ico-my-02.svg')no-repeat center; width: 16px; height: 16px; background-size: 100%; filter: var(--filterMain1); }
 
 
 
