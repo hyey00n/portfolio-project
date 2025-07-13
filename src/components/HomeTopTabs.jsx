@@ -12,20 +12,46 @@ function HomeTopTabs({ activeMenu, setActiveMenu }) {
             <ul className="tab-style-round home-mobile-tabs">
                 {menuItems.map(item => (
                     <li key={item.id} className={activeMenu === item.id ? 'active' : ''}>
-                        <a
-                            href={`#${item.id}`}
-                            onClick={(e) => {
-                                e.preventDefault();
-                                setActiveMenu(item.id);
+                        <button
+                            type="button"
+                            onClick={() => setActiveMenu(item.id)}
+                            style={{
+                                display: 'block',
+                                padding: '12px 20px',
+                                color: activeMenu === item.id ? 'var(--mainColor1)' : '#666',
+                                textDecoration: 'none',
+                                borderRadius: '25px',
+                                fontSize: '14px',
+                                fontWeight: activeMenu === item.id ? '800' : '500',
+                                transition: 'all 0.3s ease',
+                                whiteSpace: 'nowrap',
+                                background: 'none',
+                                border: 'none',
+                                cursor: 'pointer',
+                                width: '100%'
+                            }}
+                            onMouseEnter={(e) => {
+                                if (activeMenu !== item.id) {
+                                    e.target.style.background = '#e9ecef';
+                                    e.target.style.color = '#333';
+                                }
+                            }}
+                            onMouseLeave={(e) => {
+                                if (activeMenu !== item.id) {
+                                    e.target.style.background = 'none';
+                                    e.target.style.color = '#666';
+                                }
                             }}
                         >
                             {item.label}
-                        </a>
+                        </button>
                     </li>
                 ))}
             </ul>
 
-            <style jsx>{`
+            {/* jsx 속성 제거 */}
+            <style>
+                {`
                 .mobile-tab-container {
                     width: 100%;
                     overflow-x: auto;
@@ -46,33 +72,6 @@ function HomeTopTabs({ activeMenu, setActiveMenu }) {
                     flex-shrink: 0;
                 }
                 
-                .home-mobile-tabs li a{
-                    display: block;
-                    padding: 12px 20px;
-                    //background: #f8f9fa;
-                    color: #666;
-                    text-decoration: none;
-                    border-radius: 25px;
-                    font-size: 14px;
-                    font-weight: 500;
-                    transition: all 0.3s ease;
-                    white-space: nowrap;
-                    //border: 1px solid #e9ecef;
-                }
-                
-
-
-                .home-mobile-tabs li.active a
-                { 
-                    color: var(--mainColor1);
-                    font-weight: 800;}
-                
-                .home-mobile-tabs li:not(.active) a:hover {
-                    background: #e9ecef;
-                    color: #333;
-                }
-                
-                /* 스크롤바 스타일링 */
                 .mobile-tab-container::-webkit-scrollbar {
                     height: 4px;
                 }
@@ -90,7 +89,8 @@ function HomeTopTabs({ activeMenu, setActiveMenu }) {
                 .mobile-tab-container::-webkit-scrollbar-thumb:hover {
                     background: #999;
                 }
-            `}</style>
+            `}
+            </style>
         </div>
     );
 }

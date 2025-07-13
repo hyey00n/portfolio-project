@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 
 function InquirySection() {
+    console.log('🔥 InquirySection 컴포넌트가 렌더링됨!'); // 맨 위로 이동
+
     const [inquiryType, setInquiryType] = useState('0');
     const [title, setTitle] = useState('');
     const [content, setContent] = useState('');
@@ -132,10 +134,10 @@ function InquirySection() {
 
                 <style>
                     {`
-            .panel-input-col.mt30 > .flex {
-                gap: 20px !important;
-            }
-        `}
+                    .panel-input-col.mt30 > .flex {
+                        gap: 20px !important;
+                    }
+                    `}
                 </style>
             </div>
         </>

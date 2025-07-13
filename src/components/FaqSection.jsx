@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 function FaqSection() {
+    console.log('🔥 FaqSection 컴포넌트가 렌더링됨!');
     const [activeTab, setActiveTab] = useState('기술적 이해도');
     const [searchQuery, setSearchQuery] = useState('');
     const [openAccordions, setOpenAccordions] = useState(new Set());
@@ -15,6 +16,8 @@ function FaqSection() {
         fetchCategories();
         fetchFaqData('기술적 이해도');
     }, []);
+
+
 
     const fetchCategories = async () => {
         try {
@@ -148,6 +151,8 @@ function FaqSection() {
 
     return (
         <>
+
+
             <h2 className="h3-title">자주하는 질문</h2>
 
             {error && (
@@ -275,7 +280,9 @@ function FaqSection() {
                     </div>
                 </div>
             </div>
+
         </>
+
     );
 }
 
