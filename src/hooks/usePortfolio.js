@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001';
 
 export function usePortfolio() {
     const [portfolioData, setPortfolioData] = useState({});
@@ -9,7 +10,7 @@ export function usePortfolio() {
             setIsLoadingPortfolio(true);
             console.log('포트폴리오 데이터 로딩 시작...');
 
-            const response = await fetch('http://localhost:3001/api/portfolio');
+            const response = await fetch(`${API_URL}/api/portfolio`);
 
             if (response.ok) {
                 const result = await response.json();

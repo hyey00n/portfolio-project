@@ -1,5 +1,8 @@
 import { useState, useCallback } from 'react';
 
+// 🎯 파일 상단에 API URL 설정 추가
+const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001';
+
 export function useComments() {
     const [comments, setComments] = useState({});
     const [isLoadingComments, setIsLoadingComments] = useState(false);
@@ -7,7 +10,7 @@ export function useComments() {
     const fetchCommentsFromDB = async (projectId) => {
         try {
             console.log(`프로젝트 ${projectId} 댓글 로딩 시작...`);
-            const response = await fetch(`http://localhost:3001/api/comments/${projectId}`);
+            const response = await fetch(`${API_URL}/api/comments/${projectId}`);
 
             if (response.ok) {
                 const result = await response.json();
@@ -32,7 +35,7 @@ export function useComments() {
     const addCommentToDB = async (projectId, username, content) => {
         try {
             console.log(`댓글 추가 시도: 프로젝트 ${projectId}`);
-            const response = await fetch(`http://localhost:3001/api/comments/${projectId}`, {
+            const response = await fetch(`${API_URL}/api/comments/${projectId}`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
